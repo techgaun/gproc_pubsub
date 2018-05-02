@@ -1,18 +1,27 @@
 defmodule GprocPubsub do
   @moduledoc """
-  Documentation for GprocPubsub.
+  `GprocPubsub` is a simple wrapper on top of gproc
+  that can be used for your pubsub needs.
+
+  It has a simple interface
   """
 
-  @doc """
-  Hello world.
+  use GenServer
 
-  ## Examples
+  def start_link(name \\ __MODULE__) do
+  end
 
-      iex> GprocPubsub.hello
-      :world
+  def subscribe(topic) do
+  end
 
-  """
-  def hello do
-    :world
+  def publish(topic, message) do
+  end
+
+  def init(opts) do
+    {:ok, %{}}
+  end
+
+  def handle_info(_msg, state) do
+    {:noreply, state}
   end
 end
