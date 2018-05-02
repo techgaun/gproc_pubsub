@@ -9,6 +9,7 @@ defmodule GprocPubsub do
   use GenServer
 
   def start_link(name \\ __MODULE__) do
+    GenServer.start_link(__MODULE__, [], name: name)
   end
 
   def subscribe(topic) do
